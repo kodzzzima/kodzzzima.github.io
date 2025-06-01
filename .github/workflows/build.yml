@@ -33,3 +33,10 @@ jobs:
           build/dist/js/productionExecutable/
           build/dist/wasm/productionExecutable/
         if-no-files-found: error
+   - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: build/dist/wasm/productionExecutable/
+        keep_files: true
