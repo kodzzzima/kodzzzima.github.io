@@ -1,18 +1,21 @@
-This is a Kotlin Multiplatform project targeting Web.
+# ✨ Compose Multiplatform Web Project (Kotlin/Wasm)
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+Welcome! 👋  
+This project is built using **Jetpack Compose Multiplatform** and runs entirely in the browser via **Kotlin/Wasm**.
+It explores interactive UI, animation, and graphics using modern Kotlin-based technologies.
 
+🔗 **Live demo:** [kodzzzima.github.io](https://kodzzzima.github.io/)
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
+## 🚀 Features
 
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [YouTrack](https://youtrack.jetbrains.com/newIssue?project=CMP).
+- 🌐 Web UI with **Compose for Web** (Kotlin/Wasm)
+- 🎨 Custom canvas rendering and particle animations
+- 🧲 Pointer interactions and reactive visual behavior
 
-You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+## 🔧 Build & Run
+
+### Web (Kotlin/Wasm target)
+build local
+```bash
+./gradlew wasmJsBrowserDevelopmentRun
+./gradlew wasmJsBrowserDistribution
