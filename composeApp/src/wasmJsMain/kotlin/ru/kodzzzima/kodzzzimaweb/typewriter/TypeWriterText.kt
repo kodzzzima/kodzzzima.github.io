@@ -4,8 +4,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import kodzzzimaweb.composeapp.generated.resources.Res
+import kodzzzimaweb.composeapp.generated.resources.minecraft
 import kotlinx.coroutines.delay
+import org.jetbrains.compose.resources.Font
 
 @Composable
 fun TypewriterText(
@@ -53,7 +57,9 @@ fun TypewriterText(
     Text(
         text = displayText + if (showCursor) "|" else " ",
         fontSize = 14.sp,
-        fontFamily = FontFamily.Cursive,
-        color = Color(0xFF4527A0)
+        fontFamily = FontFamily(
+            Font(Res.font.minecraft, FontWeight.Normal)
+        ),
+        color = Color(0xFF555555)
     )
 }
